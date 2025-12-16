@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- Fonte moderna e legível -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -14,7 +13,6 @@
         height: 200px;
         overflow: hidden;
 
-        /* Degradê reconstruído */
         background: linear-gradient(
             90deg,
             #0A1A3A 0%,
@@ -32,7 +30,15 @@
         font-family: 'Inter', sans-serif;
     }
 
-    /* Ajuste do widget */
+    /* O widget precisa de espaço para renderizar */
+    #widget-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .weatherwidget-io {
         font-family: 'Inter', sans-serif !important;
         font-size: 22px !important;
@@ -44,13 +50,15 @@
 </head>
 
 <body>
-    <a class="weatherwidget-io"
-       href="https://forecast7.com/pt/n10d25n48d32/palmas/"
-       data-label_1="Palmas"
-       data-label_2="Tocantins"
-       data-theme="pure">
-       Palmas Tocantins
-    </a>
+    <div id="widget-container">
+        <a class="weatherwidget-io"
+           href="https://forecast7.com/pt/n10d25n48d32/palmas/"
+           data-label_1="Palmas"
+           data-label_2="Tocantins"
+           data-theme="pure">
+           Palmas Tocantins
+        </a>
+    </div>
 
     <script>
     !function(d,s,id){
