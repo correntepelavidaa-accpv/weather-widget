@@ -1,22 +1,67 @@
-<div style="width:1920px; height:200px; overflow:hidden;">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+<!-- Fonte moderna e legível -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        width: 1920px;
+        height: 200px;
+        overflow: hidden;
+
+        /* Degradê reconstruído */
+        background: linear-gradient(
+            90deg,
+            #0A1A3A 0%,
+            #1E4F9A 15%,
+            #3FA7F5 30%,
+            #B38CFF 50%,
+            #FF8AD4 70%,
+            #C218D4 85%,
+            #6A1B9A 100%
+        );
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Ajuste do widget */
+    .weatherwidget-io {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 22px !important;
+        font-weight: 600 !important;
+        color: white !important;
+        text-shadow: 0px 0px 6px rgba(0,0,0,0.4);
+    }
+</style>
+</head>
+
+<body>
     <a class="weatherwidget-io"
        href="https://forecast7.com/pt/n10d25n48d32/palmas/"
        data-label_1="Palmas"
        data-label_2="Tocantins"
-       data-theme="sky">
+       data-theme="pure">
        Palmas Tocantins
     </a>
-</div>
 
-<script>
-!function(d,s,id){
-    var js,fjs=d.getElementsByTagName(s)[0];
-    if(!d.getElementById(id)){
-        js=d.createElement(s);
-        js.id=id;
-        js.src='https://weatherwidget.io/js/widget.min.js';
-        fjs.parentNode.insertBefore(js,fjs);
-    }
-}(document,'script','weatherwidget-io-js');
-</script>
-
+    <script>
+    !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){
+            js=d.createElement(s);
+            js.id=id;
+            js.src='https://weatherwidget.io/js/widget.min.js';
+            fjs.parentNode.insertBefore(js,fjs);
+        }
+    }(document,'script','weatherwidget-io-js');
+    </script>
+</body>
+</html>
